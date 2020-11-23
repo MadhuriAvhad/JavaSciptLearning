@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>OnMouseOver & OnMouseOut </title>
+        <script type = "text/javascript">
+        function setNewImage()
+        {
+           document.getElementById("image").src ="https://img.freepik.com/free-photo/3d-abstract-polygonal-blue-background_1048-11983.jpg?size=626&ext=jpg";
+        }
+        function setOldImage()
+        {
+            document.getElementById("image").src ="https://i2.wp.com/files.123freevectors.com/wp-content/original/119197-black-and-turquoise-abstract-background-graphic.jpg?w=800&q=95";
+        }
+        </script>
+    </head>
+    <body>
+       <img id= "image" 
+       onmouseover="setNewImage()" 
+       onmouseout="setOldImage()" 
+       src="https://i2.wp.com/files.123freevectors.com/wp-content/original/119197-black-and-turquoise-abstract-background-graphic.jpg?w=800&q=95" 
+       width = "100%"/> 
+    </body>
+</html>
