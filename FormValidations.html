@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Form Validation</title>
+        <script type = "text/javascript">
+        function validate()
+        {
+            var uname = document.getElementById("uname");
+            var pass = document.getElementById("pass");
+
+            if(uname.value.trim() == "")
+            {
+                alert("Username couldn't be blank");
+                uname.style.border = "solid 3px red";
+                document.getElementById("iuser").style.visibility="visible";
+                return false;
+            }
+            else if(pass.value.trim() == "")
+            {
+                alert("password couldn't be blank");
+                pass.style.border = "solid 3px red";
+                document.getElementById("ipass").style.visibility="visible";
+                return false;
+            }
+            else if(pass.value.trim().length < 5)
+            {
+                alert("password is too weak...");
+                return false;
+            }
+            else
+            {
+                alert("logging sucessfully...");
+                return true;
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="return validate()" 
+        action="MessageFormValidation.html">
+            <input id="uname" 
+            placeholder="Username" 
+            type="text"/></input>
+            <label id = "iuser" 
+            style ="color:red; visibility: hidden;">Invalid</label>
+            <br><br>
+
+            <input id="pass"
+            placeholder="password"
+            type="password"/>
+            <label id = "ipass" 
+            style ="color:red; visibility: hidden;">Invalid</label> 
+            <br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </body>
+</html>
