@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email ID validation</title>
+    <script type ="text/javascript">
+        function validate()
+        {
+            var email = document.getElementById("email1").value;
+            var regx1 = /^([a-z A-Z 0-9 \.-]+)@([a-z A-Z 0-9 -]+).([a-z]{2,8}) $/;
+            var regx2 = /^([a-z A-Z 0-9 \.-]+)@([a-z A-Z 0-9 -]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+            if(regx1.test(email)||regx2.test(email))
+            {
+                document.getElementById("emailV").innerHTML="valid";
+                document.getElementById("emailV").style.visibility="visible";
+                document.getElementById("emailV").style.color="green";
+            }
+            else
+            {
+                document.getElementById("emailV").innerHTML="Invalid";
+                document.getElementById("emailV").style.visibility="visible";
+                document.getElementById("emailV").style.color="red";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form action="">
+       <h4>Email ID: <input id="email1" type="text" placeholder="email-id"/> </h4> (example: yourname@domain.extensions ) <br>
+
+        <label id="emailV" style="color:red; visibility: hidden"></label> <br>
+
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Basic Annimation - Zoom In & OUt</title>
+    <script type="text/javascript">
+        var width = 100;
+        var difference = 2;
+        var interveralID = 0;
+
+        function increase()
+        {
+            clearInterval(interveralID);
+            interveralID = setInterval(expand,20);
+        }
+        function expand()
+        {
+            if(width < 200)
+            {
+                width = width + difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(interveralID);
+            }
+        }
+
+        function decrease()
+        {
+            clearInterval(interveralID);
+            interveralID = setInterval(shrink,20);
+        }
+        function shrink()
+        {
+            if(width > 100)
+            {
+                width = width-difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else
+            {
+                clearInterval(interveralID);
+            }
+        }
+
+        
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+    <img onmouseover ="increase()" onmouseout="decrease()" id="img1" 
+    src="https://i1.wp.com/www.menstylefashion.com/wp-content/uploads/2015/07/christiano-ronaldo-form-football-to-fashion.jpg?resize=750%2C1125&ssl=1" 
+    width="100"/>
+</body>
+</html>

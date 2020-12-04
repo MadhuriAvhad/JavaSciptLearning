@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chrome Dev Tool | Console Log Method</title>
+    <script type = "text/javascript">
+    function addValues()
+    {
+        var a = document.getElementById("t1").value;
+        var b = document.getElementById("t2").value;
+        document.getElementById("op").innerHTML="Result : "+(a+b);
+        console.log(a+b); // to show in console for practice
+    }
+    </script>
+</head>
+<body>
+    <input id="t1" type="text" placeholder="text 1"/>
+    <br><br>
+    <input id="t2" type="text" placeholder="text 2"/>
+    <br><br>
+    <button id="btn" onclick="addValues()">ADD</button>
+    <h2 id="op"></h2>
+</body>
+</html>
